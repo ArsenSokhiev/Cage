@@ -1,0 +1,3 @@
+[submodule "Cage/vendor/spdlog"]
+	path = Cage/vendor/spdlog
+	url = https://github.com/gabime/spdlog
