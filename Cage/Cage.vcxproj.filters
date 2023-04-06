@@ -4,6 +4,9 @@
     <Filter Include="Cage">
       <UniqueIdentifier>{3577837C-21AE-840D-CA9A-6A10B6B0000F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Cage\Events">
+      <UniqueIdentifier>{79552E3A-E50A-A72F-6EFF-A006DAB39D33}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Cage.h" />
@@ -16,9 +19,15 @@
     <ClInclude Include="src\Cage\EntryPoint.h">
       <Filter>Cage</Filter>
     </ClInclude>
+    <ClInclude Include="src\Cage\Events\Event.h">
+      <Filter>Cage\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Cage\Log.h">
       <Filter>Cage</Filter>
     </ClInclude>
+    <ClInclude Include="src\Cage\Events\KeyEvent.h" />
+    <ClInclude Include="src\Cage\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Cage\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Cage\Application.cpp">
