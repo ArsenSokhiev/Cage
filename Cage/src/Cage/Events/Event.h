@@ -1,5 +1,6 @@
 #pragma once
 
+#include "cgpch.h"
 #include "Cage/Core.h"
 
 namespace Cage
