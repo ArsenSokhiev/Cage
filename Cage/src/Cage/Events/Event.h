@@ -2,9 +2,6 @@
 
 #include "Cage/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Cage
 {
 

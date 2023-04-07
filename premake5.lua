@@ -13,6 +13,9 @@ project "Cage"
 	targetdir ("bin/" .. outputdir .. "%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "%{prj.name}")
 
+	pchheader "cgpch.h"
+	pchsource "Cage/src/cgpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

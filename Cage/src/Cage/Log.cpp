@@ -1,3 +1,4 @@
+#include "cgpch.h"
 #include "Log.h"
 
 namespace Cage

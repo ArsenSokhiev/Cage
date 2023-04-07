@@ -19,15 +19,22 @@
     <ClInclude Include="src\Cage\EntryPoint.h">
       <Filter>Cage</Filter>
     </ClInclude>
+    <ClInclude Include="src\Cage\Events\ApplicationEvent.h">
+      <Filter>Cage\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Cage\Events\Event.h">
+      <Filter>Cage\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cage\Events\KeyEvent.h">
+      <Filter>Cage\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cage\Events\MouseEvent.h">
       <Filter>Cage\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Cage\Log.h">
       <Filter>Cage</Filter>
     </ClInclude>
-    <ClInclude Include="src\Cage\Events\KeyEvent.h" />
-    <ClInclude Include="src\Cage\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Cage\Events\MouseEvent.h" />
+    <ClInclude Include="src\cgpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Cage\Application.cpp">
@@ -36,5 +43,6 @@
     <ClCompile Include="src\Cage\Log.cpp">
       <Filter>Cage</Filter>
     </ClCompile>
+    <ClCompile Include="src\cgpch.cpp" />
   </ItemGroup>
 </Project>

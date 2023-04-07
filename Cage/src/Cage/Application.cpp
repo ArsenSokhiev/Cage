@@ -1,3 +1,4 @@
+#include "cgpch.h"
 #include "Application.h"
 
 #include "Cage/Log.h"
