@@ -5,21 +5,25 @@
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
 
+#include "GLFW/glfw3.h"
+
 namespace Cage
 {
 
-	Application::Application() {}
+	Application::Application() 
+	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
+	}
 	Application::~Application() {}
 
 	void Application::Run()
 	{
-		WindowResizeEvent event(1280, 720);
-		if (event.IsInCategory(EventCategory::EC_Application))
+		while (m_Running)
 		{
-			CG_TRACE(event);
+			glClearColor(1, 1, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
 		}
-
-		while (true);
 	}
 
 }

@@ -5,6 +5,12 @@ workspace "Cage"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Cage/vendor/GLFW/include"
+
+-- includes GLFW premake file 
+include "Cage/vendor/GLFW"
+
 project "Cage"
 	location "Cage"
 	kind "SharedLib"
@@ -25,7 +31,14 @@ project "Cage"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW", -- linking to included project
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -40,7 +53,11 @@ project "Cage"
 		}
 
 	filter "configurations:Debug"
-		defines "CG_DEBUG"
+		defines 
+		{
+			"CG_DEBUG",
+			"CG_ENABLE_ASSERTS"
+		}
 		symbols "On"
 
 	filter "configurations:Release"
@@ -91,7 +108,11 @@ project "Sandbox"
 		}
 
 	filter "configurations:Debug"
-		defines "CG_DEBUG"
+		defines 
+		{
+			"CG_DEBUG",
+			"CG_ENABLE_ASSERTS"
+		}
 		symbols "On"
 
 	filter "configurations:Release"

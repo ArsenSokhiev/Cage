@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>	
 
+#include "Cage/Log.h"
+
 #ifdef CG_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif

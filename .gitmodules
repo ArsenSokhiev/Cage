@@ -1,3 +1,6 @@
 [submodule "Cage/vendor/spdlog"]
 	path = Cage/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Cage/vendor/GLFW"]
+	path = Cage/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW
